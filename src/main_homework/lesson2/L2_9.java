@@ -3,31 +3,33 @@
 
 package main_homework.lesson2;
 
+import static java.lang.System.out;
+
 public class L2_9 {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         int[] array;
         array = new int[10];
-        for (int i=0; i<10; i++) {
-            array[i] = ((int)(Math.random()*500) - (int)(Math.random()*600));
+
+        for (int i = 0; i < 10; i++) {
+            array[i] = ((int) (Math.random() * 500) - (int) (Math.random() * 100));
             System.out.println(array[i]);
+        }
+        System.out.println("");
 
 
-            for(int indexL=0;indexL<10;indexL++)
-            {
-                greater=0;
-                for(int indexR=0;indexR<10;indexR++)
-                {
-                    if(tenNums[indexL]>tenNums[indexR])
-                    {
-                        greater++;
-                    }
-                }
-                orderedNums[greater]=tenNums[indexL];
+        int i = 1;
+        int temp;
+        while (array[i] < array[i - 1]) {
+            temp = array[i - 1];
+            array[i - 1] = array[i];
+            array[i] = temp;
+            i++;
+            if (i == 9) {
+                i = 1;
             }
-
-
-
+                    }
+        for (int a = 0; a < 10; a++) {
+            System.out.println(array[a]);
         }
     }
 }
