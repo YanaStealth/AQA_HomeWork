@@ -4,32 +4,39 @@
 package main_homework.lesson2;
 
 import static java.lang.System.out;
+import java.util.Arrays;
 
 public class L2_9 {
     public static void main(String args[]) {
         int[] array;
-        array = new int[10];
-
-        for (int i = 0; i < 10; i++) {
-            array[i] = ((int) (Math.random() * 500) - (int) (Math.random() * 100));
-            System.out.println(array[i]);
-        }
-        System.out.println("");
+                array = new int[10];
 
 
-        int i = 1;
-        int temp;
-        while (array[i] < array[i - 1]) {
-            temp = array[i - 1];
-            array[i - 1] = array[i];
-            array[i] = temp;
-            i++;
-            if (i == 9) {
-                i = 1;
-            }
+       for (int i = 0; i < 10; i++) {
+      array[i] = ((int) (Math.random() * 500) - (int) (Math.random() * 700));
                     }
-        for (int a = 0; a < 10; a++) {
-            System.out.println(array[a]);
-        }
-    }
-}
+       System.out.println(Arrays.toString(array));
+       System.out.println("");
+
+
+
+        int temp;
+        for (int i = 0; i < 10; i++) {
+            for (int j=1; j<10; j++)
+         if (array[j] < array[j - 1])
+                {
+            temp = array[j - 1];
+            array[j - 1] = array[j];
+            array[j] = temp;
+            //i++;
+            //if (i == 9) {
+               // i = 1;
+            }
+
+    }    System.out.println(Arrays.toString(array));
+
+}}
+
+
+
+
