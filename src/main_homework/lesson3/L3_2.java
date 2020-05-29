@@ -8,7 +8,7 @@ package main_homework.lesson3;
 
 public class L3_2 {
     public static void main(String[] args) {
-        String hello = "&", he;
+        String hello = "%", he;
         if (hello.length() <= 1) {
             he = hello;}
         else {he = hello.substring(0, 2);
