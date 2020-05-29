@@ -5,16 +5,18 @@
 
 package main_homework.lesson3;
 
-import java.util.Arrays;
 
 public class L3_2 {
     public static void main(String[] args) {
-        String hello = "Р", he;
-        if (hello.equals("")) {
+        String hello = "&", he;
+
+        if (hello.length() <= 1) {
             he = hello;
-        } else {
-            he = hello.substring(0, 1);
-        }
+            System.out.println(hello);
+        } else he = hello.substring(0, 2);
         System.out.println(he);
     }
 }
+
+
+
