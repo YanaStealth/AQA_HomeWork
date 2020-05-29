@@ -4,14 +4,17 @@
 //   yields the empty string "".
 
 package main_homework.lesson3;
+
 import java.util.Arrays;
+
 public class L3_2 {
-    public static void main (String[] args){
-        String hello="Р", he;
-           if (hello.equals("")){
-             he=hello;
+    public static void main(String[] args) {
+        String hello = "Р", he;
+        if (hello.equals("")) {
+            he = hello;
         } else {
-         he = hello.substring(0,1);}
+            he = hello.substring(0, 1);
+        }
         System.out.println(he);
     }
 }
