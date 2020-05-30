@@ -10,7 +10,7 @@ public class L3_5 {
 String upper="ABCDEFGHIJK";
         String low = lowcase(upper);
         String withoutVowel= low.replaceAll("[AEIOUYaeiouy]", "");
-        System.out.println("Uppercase is replaced by lowercase:" + low);
+        System.out.println("Uppercases are replaced by lowercases:" + low);
         System.out.println("Vowels are removed:" + withoutVowel);
     }
 
