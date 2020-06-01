@@ -11,7 +11,7 @@ public class L3_4 {
             System.out.println(" \"word1\" string starts with \"The\" : " + word1);
         }
         if (word2.substring(0, 3).equals("The")) {
-            System.out.println("word1 start with \"The\"" + word2);
+            System.out.println("word2 start with \"The\"" + word2);
         }
     }
 }
