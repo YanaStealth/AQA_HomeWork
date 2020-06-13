@@ -21,7 +21,7 @@ public class L4_3_Uses_A {
         System.out.println("engine:" + car.spareparts.engine);
     }
 
-    class Spareparts {
+    public class Spareparts {
         public int wheels;
         public String engine;
 
@@ -31,8 +31,8 @@ public class L4_3_Uses_A {
         }
     }
 
-    class Car {
-        Spareparts spareparts;
+    public class Car {
+        public Spareparts spareparts;
 
         public Car(Spareparts spareparts) {
             this.spareparts = spareparts;
