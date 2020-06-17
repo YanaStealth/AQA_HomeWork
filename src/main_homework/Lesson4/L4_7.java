@@ -3,29 +3,36 @@
 package main_homework.Lesson4;
 
 public class L4_7 {
-
+int a;
+double b;
+String c;
+    // Initializer block starts..
     {
-        System.out.println("init block 1");
-    } //обычный блок инициализации запускается в конструкторе между super
-
-    static {
-        System.out.println("static init block 1");
-    } //статический блок запускается при первом обращении к классу в 1ю очередь
-
-    L4_7() {
-        //super(); по умолчанию стоит, можно не писать, по умолчанию в родительском к-ре
-        System.out.println("constructor");
+        // This code is executed before every constructor.
+        System.out.println("Common part of constructors invoked !!");
+    }
+    // Initializer block ends
+    public L4_7() {
+        System.out.println("Default Constructor invoked");
+    }
+    public L4_7(int a, double b, String c) {
+        this.a=a;
+        this.b=b;
+        this.c=c;
+        System.out.println("Parametrized 1 Constructor invoked");
+        System.out.println("a:"+a+" b:"+b+" c:"+c);
     }
 
-    public static void main(String[] args) {
-        new L4_7();
+    public L4_7(int x) {
+        System.out.println("Parametrized 2 constructor invoked");
     }
 
-    {
-        System.out.println("init block 2");
-    }
-
-    static {
-        System.out.println("static init block 2");
+    public static void main(String arr[]) {
+        L4_7 obj1, obj2;
+        obj1 = new L4_7(3, 2.09, "DDD");
+        obj2 = new L4_7(0);
     }
 }
+
+
+
