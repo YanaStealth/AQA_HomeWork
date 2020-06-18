@@ -9,13 +9,16 @@ public class Human {
     int weight, age, height;
     String firstName, lastName;
 
+    public Human(int weight, int age, int height, String firstName, String lastName) {
+        this.weight = weight;
+        this.age = age;
+        this.height = height;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public static void main(String[] args) {
-        Human human1 = new Human();
-        human1.weight = 80;
-        human1.age = 25;
-        human1.height = 170;
-        human1.firstName = "Alex";
-        human1.lastName = "Berker";
+        Human human1 = new Human(88, 25, 170, "Alex", "Berker");
         System.out.println("weight = " + human1.weight);
         System.out.println("age = " + human1.age);
         System.out.println("height = " + human1.height);
