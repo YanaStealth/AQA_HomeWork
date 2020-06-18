@@ -6,6 +6,7 @@ public class L4_7 {
 int a;
 double b;
 String c;
+    int x;
     // Initializer block starts..
     {
         // This code is executed before every constructor.
@@ -24,7 +25,8 @@ String c;
     }
 
     public L4_7(int x) {
-        System.out.println("Parametrized 2 constructor invoked");
+        this.x=x;
+        System.out.println("Parametrized 2 constructor invoked"+x);
     }
 
     public static void main(String arr[]) {
