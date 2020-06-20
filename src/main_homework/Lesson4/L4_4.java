@@ -6,7 +6,7 @@ In this main method you should create your Calculator object and do some calcula
 by calling your "calculate" method. Print all results to the console. */
 
 
-// не выходит без
+// Дима: лучше использовать конструкцию if - else if - else
 
 
 package main_homework.Lesson4;
@@ -21,7 +21,8 @@ public class L4_4 {
         this.operation = operation;
     }
 
-    public L4_4() {System.out.println("no value");
+    public L4_4() {
+        System.out.println("no value");
     }
 
     public static void main(String[] args) {
@@ -41,21 +42,16 @@ public class L4_4 {
     public void calculate() {
         if (operation.equals("+")) {
             System.out.println(firstValue + secondValue);
+        } else if (operation.equals("-")) {
+            System.out.println(firstValue - secondValue);
+        } else if (operation.equals("/")) {
+            System.out.println(firstValue / secondValue);
+        } else if (operation.equals("*")) {
+            System.out.println(firstValue * secondValue);
         } else {
-            if (operation.equals("-")) {
-                System.out.println(firstValue - secondValue);
-            } else {
-                if (operation.equals("/")) {
-                    System.out.println(firstValue / secondValue);
-                } else {
-                    if (operation.equals("*")) {
-                        System.out.println(firstValue * secondValue);
-                    } else {
-                        System.out.println("no value");
-                    }
-                }
-            }
+            System.out.println("no value");
         }
         System.out.println("firstValue: " + firstValue + ", String operation: " + operation + ", secondValue:" + secondValue);
     }
 }
+
