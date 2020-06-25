@@ -2,6 +2,8 @@
 // You can use tips from the task 3.
 //
 
+
+//public acces means the class member is available from anywhere. but if the classes are in different packages there is need in import of the publiс member package/member.
 package main_homework.Lesson5;
 
 import new_package.A;
