@@ -13,6 +13,7 @@
 //public class B {
 //}
 //current class, another package
+// implementation: public class B
 
 package main_homework.Lesson5;
 
