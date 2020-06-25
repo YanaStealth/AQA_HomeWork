@@ -5,8 +5,8 @@
 package main_homework.Lesson5;
 
 public class L5_1_1 {
-}
+
     public static void main(String[] args) {
         new_package.L5_1 lesson1 = new new_package.L5_1(2, "Wuuu");
         com.domainname.modulename.L5_1 lesson2 = new com.domainname.modulename.L5_1(500, true);
-    }
+    }}
