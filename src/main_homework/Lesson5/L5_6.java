@@ -13,19 +13,22 @@ public class L5_6 {
     int b = 6;
     int c = minFunction(a, b);
         System.out.println("Минимальное значение = " + c);
+        punc();
+        L5_6 func1=L5_6.punc();
+        func1.minFunction(a,b);
     }
 
 
-    public void minFunction(int n1, int n2) {
+    public static int minFunction(int n1, int n2) {
         int min;
         if (n1 > n2)
             min = n2;
         else
             min = n1;
-    }
+    return min;}
     public static L5_6 punc(){return new L5_6();}
-    L5_6 func1=L5_6.punc();
-    func1.minFunction();
+    //L5_6 func1=L5_6.punc();
+  //  func1.minFunction();
 
    }
 
