@@ -13,7 +13,7 @@ public class L5_8 {
     }
 
     public int getPrIn1() {
-        return prCh5;
+        return prIn1;
     }
 
     public void setPrIn1(int newPrIn1) {
@@ -28,7 +28,7 @@ public class L5_8 {
         prS2 = newPrS2;
     }
 
-    public boolean getPrBo3() {
+    public boolean isPrBo3PrBo3() {
         return prBo3;
     }
 
