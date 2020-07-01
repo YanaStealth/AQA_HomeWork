@@ -9,7 +9,7 @@ public class L5_1 {
         this.d = d;
     }
 
-    public static void printHello(int c, String d) {
+    public static void printHello(int c, boolean d) {
         System.out.println("Hello" + c + d);
     }
 

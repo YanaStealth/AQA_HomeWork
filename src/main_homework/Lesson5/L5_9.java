@@ -6,7 +6,7 @@
 *Static methods are methods that are not related to any object. That don't need them to be used. Static method is used can use only static fields of the class.
  * Static method or field belong to the class, we can call it using class name i.e. ClassName.fieldName
 * Dynamic elements are created every time the Class sample is created, can be used via the Class sample, access to them are via variable-object ,
-* static elements are connected with the very first Class, can be used without creating the class sample.
+* static elements are connected with the very first Class, can be used without creating the class sample. Using static method saves memory.
 *Dynamic element access:
 * ObjectName.SampleMethodName(<Parameters>)
 ObjectName.SampleVariableName
@@ -19,4 +19,11 @@ ClassName.ClassVariableName
 package main_homework.Lesson5;
 
 public class L5_9 {
+    public static void firstMethod (){
+        System.out.println("Это статический метод!");
+    }
+
+    public void secondMethod (){
+        System.out.println("Это НЕ статический метод!");
+    }
 }
