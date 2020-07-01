@@ -1,4 +1,4 @@
-
+/*
 package new_package;
 
 import main_homework.Lesson5.L5_3;
@@ -20,5 +20,7 @@ public class B {
 
     }
 }
+
+ */
 
 

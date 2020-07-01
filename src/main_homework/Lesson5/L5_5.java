@@ -6,11 +6,12 @@
 // - Try to access the private members
 
 //private access means that the member is available only inside its class
-
-package main_homework.Lesson5;
-
-
+/*
+import main_homework.Lesson5.L5_3;
 import new_package.A;
+
+
+        package main_homework.Lesson5;
 
 public class L5_5 {
 
@@ -21,5 +22,5 @@ public class L5_5 {
         System.out.println(ccc.z);  //private, another main_homework package
     }
 }
-
+*/
 
