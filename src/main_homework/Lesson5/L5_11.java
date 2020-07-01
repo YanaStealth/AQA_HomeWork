@@ -23,4 +23,16 @@
 package main_homework.Lesson5;
 
 public class L5_11 {
+    static int a;
+    int b;
+
+    static void change(int a) {
+        a = a + 200;
+        System.out.println("Это статический метод! a=" + a);
+    }
+
+    void anotherChange(int b) {
+        b = b + 5000;
+        System.out.println("Это НЕ статический метод! b=" + b);
+    }
 }
