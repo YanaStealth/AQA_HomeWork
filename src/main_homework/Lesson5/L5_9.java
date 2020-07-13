@@ -19,11 +19,10 @@ ClassName.ClassVariableName
 package main_homework.Lesson5;
 
 public class L5_9 {
-    public static void firstMethod (){
+    public static void firstMethod() {
         System.out.println("Это статический метод!");
     }
-
-    public void secondMethod (){
+    public void secondMethod() {
         System.out.println("Это НЕ статический метод!");
     }
 }

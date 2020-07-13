@@ -5,31 +5,32 @@ package main_homework.Lesson5;
 
 public class L5_6 {
 
-    private L5_6(){
+    private L5_6() {
     }
 
     public static void main(String[] args) {
-    int a = 11;
-    int b = 6;
-    int c = minFunction(a, b);
+        int a = 11;
+        int b = 6;
+        L5_6 func1 = L5_6.newObject();
+        func1.minFunction(a, b);
+        L5_6 l5_6 = new L5_6();
+        int c = l5_6.minFunction(a, b);
         System.out.println("Минимальное значение = " + c);
-        punc();
-        L5_6 func1=L5_6.punc();
-        func1.minFunction(a,b);
     }
 
-
-    public static int minFunction(int n1, int n2) {
+    public int minFunction(int n1, int n2) {
         int min;
         if (n1 > n2)
             min = n2;
         else
             min = n1;
-    return min;}
-    public static L5_6 punc(){return new L5_6();}
-    //L5_6 func1=L5_6.punc();
-  //  func1.minFunction();
+        return min;
+    }
 
-   }
+    public static L5_6 newObject() {
+        return new L5_6();
+    }
+
+}
 
 

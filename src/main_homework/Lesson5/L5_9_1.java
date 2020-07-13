@@ -5,5 +5,4 @@ public class L5_9_1 {
         L5_9 c1 = new L5_9();
         c1.secondMethod();
     }
-
 }
