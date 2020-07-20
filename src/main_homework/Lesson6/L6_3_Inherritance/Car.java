@@ -1,4 +1,4 @@
-package main_homework.Lesson6_3_Inherritance;
+package main_homework.Lesson6.L6_3_Inherritance;
 
 public class Car extends Vehicle {
     public Car(String name, String size) {
@@ -23,8 +23,8 @@ public class Car extends Vehicle {
         System.out.println("Method steer is overriden. Velocity: " + velocity);
     }
 
-    public void changeGears(int direction) {
-        System.out.println("changeGears Method. Name: " + getName() + "Direction:" + direction);
+    public void changeGears(int transmissionNumber) {
+        System.out.println("changeGears Method. Name: " + getName() + "Transmission Number:" + transmissionNumber);
 
     }
 }

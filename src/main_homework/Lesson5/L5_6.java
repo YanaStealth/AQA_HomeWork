@@ -3,19 +3,9 @@
 
 package main_homework.Lesson5;
 
-public class L5_6 {
+class L5_6 {
 
     private L5_6() {
-    }
-
-    public static void main(String[] args) {
-        int a = 11;
-        int b = 6;
-        L5_6 func1 = L5_6.newObject();
-        func1.minFunction(a, b);
-        L5_6 l5_6 = new L5_6();
-        int c = l5_6.minFunction(a, b);
-        System.out.println("Минимальное значение = " + c);
     }
 
     public int minFunction(int n1, int n2) {
@@ -27,10 +17,12 @@ public class L5_6 {
         return min;
     }
 
-    public static L5_6 newObject() {
+    public static L5_6 newObject() { // new object, I can refer directly to it without creating new object in another class cause its static method
         return new L5_6();
     }
-
 }
+
+
+
 
 

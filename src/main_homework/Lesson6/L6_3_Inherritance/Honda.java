@@ -1,4 +1,4 @@
-package main_homework.Lesson6_3_Inherritance;
+package main_homework.Lesson6.L6_3_Inherritance;
 
 public class Honda extends Car {
     public Honda(String name, String size) {

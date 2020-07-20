@@ -4,7 +4,7 @@ You should be able to hand steering, changing gears, and moving(speed in other w
 You will want to decide where to put the appropriate state and behaviours(fields and methods).
 As mentioned above, changing gears, increasing/decreasing speed should be included.
 For you specific type of vehicle you will want to add something specific for that type of car. */
-package main_homework.Lesson6_3_Inherritance;
+package main_homework.Lesson6.L6_3_Inherritance;
 
 public class Vehicle {
     private String name;
