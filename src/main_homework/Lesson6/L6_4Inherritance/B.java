@@ -4,7 +4,7 @@ public class B extends A {
     int var4, var5;
 
     public B(int var4, int var5) {
-        super(var4, var5); // calling parent class constructor
+        super(var4, var5); // calling parent class constructorб we do not declare,
         this.var4 = var4;
         this.var5 = var5;
         System.out.println("Class B. You are inside constructor 1");
