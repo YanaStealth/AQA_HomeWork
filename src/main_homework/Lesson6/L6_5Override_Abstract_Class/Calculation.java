@@ -3,7 +3,7 @@ package main_homework.Lesson6.L6_5Override_Abstract_Class;
 public class Calculation extends Figure{
     int width, height;
     public Calculation(int width, int height){
-        super();
+        super(width, height);  //конструктор наследника должен вызвать явно конструктор супер класса, если в супер классе конструктор имеет параметры
         this.width=width;
         this.height=height;
     }

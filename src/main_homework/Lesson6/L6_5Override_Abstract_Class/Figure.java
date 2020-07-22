@@ -6,7 +6,7 @@ package main_homework.Lesson6.L6_5Override_Abstract_Class;
 abstract public class Figure {
     int width, height;
 
-    public Figure() {
+    public Figure(int width, int height) {
         this.width = width;
         this.height = height;
     }
