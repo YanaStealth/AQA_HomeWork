@@ -3,5 +3,13 @@ Add an abstract method "calculateArea" which should be overriden by the concrete
 
 package main_homework.Lesson6.L6_5Override_Abstract_Class;
 
-public class L6_5_Override__AbstractClass {
+abstract public class Figure {
+    int width, height;
+
+    public Figure() {
+        this.width = width;
+        this.height = height;
+    }
+
+    abstract public int calculateArea();
 }

@@ -1,4 +1,4 @@
-package main_homework.Lesson6.L6_5Override_Abstract_Class;
+package main_homework.Lesson6.L6_4Inherritance;
 
 public class B extends A {
     int var4, var5;
