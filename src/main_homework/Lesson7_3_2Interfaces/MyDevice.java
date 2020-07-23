@@ -15,6 +15,5 @@ public class MyDevice implements Volume,State{
     @Override
     public void changeVolume(double value) {
         System.out.println("the Value is: " + value);
-        return value;
     }
 }
