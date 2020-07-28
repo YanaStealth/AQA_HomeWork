@@ -8,48 +8,26 @@ package main_homework.Lesson6;
 public class Task_L6_2_Inherritance {
     public static void main(String[] args) {
     }
-
     public class Worker {
-
     }
-
     public class IT extends Worker {
-
     }
-
     public class Programmer extends IT {
-
     }
-
     public class ProjectManager extends IT {
-
     }
-
     public class TechnicalDirector extends IT {
-
     }
-
     public class Clerk extends Worker {
-
     }
-
     public class HR extends Clerk {
-
     }
-
     public class Cleaner extends Clerk {
-
     }
-
     public class OfficeManager extends Clerk {
-
     }
-
-
     public class CTO {
-
     }
-
 }
 
 

@@ -17,7 +17,7 @@ public class A {
         this.carName = carName;
         this.wheelsNumber = wheelsNumber;
     }
-
+}
 
      /*   public static void main(String[] args) {
 
@@ -33,4 +33,4 @@ public class A {
             B honda = new B("Honda", 4);
 
       */
-}
+
