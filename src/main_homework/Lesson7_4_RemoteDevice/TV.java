@@ -9,7 +9,7 @@ public class TV extends TVDevice {
     private int volumeLevel;
 
     public TV() {
-            }
+    }
 
     public TV(String modelName, boolean isOn, int channelNumber, int volumeLevel) {
         super(modelName, isOn);
@@ -17,8 +17,7 @@ public class TV extends TVDevice {
         this.volumeLevel = volumeLevel;
     }
 
-    public int getChannelNumber()
-    {
+    public int getChannelNumber() {
         return channelNumber;
     }
 

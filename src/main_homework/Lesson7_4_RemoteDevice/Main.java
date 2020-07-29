@@ -6,54 +6,51 @@ public class Main {
     RemoteController remote2 = new RemoteController(tv1);
 
     public static void main(String[] args) {
-    Main mainTv1=new Main();
+        Main mainTv1 = new Main();
+
+        mainTv1.print1();
+
+        mainTv1.tv1.currentChannel();
+        mainTv1.tv1.powerOn();
+        mainTv1.tv1.setChannel(10);
+        mainTv1.tv1.upVolume();
+        mainTv1.tv1.downVolume();
+        mainTv1.tv1.mute();
+        mainTv1.tv1.powerOff();
+
+        mainTv1.print2();
+
+        mainTv1.print3();
+
+        mainTv1.remote2.upVolume();
+        mainTv1.remote2.downVolume();
+        mainTv1.tv1.setChannel(100);
+        mainTv1.remote2.switchTheCannel(mainTv1.tv1.getChannelNumber());
+        mainTv1.remote2.currentChannel();
+        mainTv1.remote2.disconnectDevice();
 
 
+        mainTv1.print4();
 
+        mainTv1.remote1.upVolume();
+        mainTv1.remote1.downVolume();
+        mainTv1.remote1.switchTheCannel(22);
+        mainTv1.remote1.currentChannel();
+        mainTv1.remote1.disconnectDevice();
+    }
 
-        public void print1();
-
-        tv1.currentChannel();
-        tv1.powerOn();
-        tv1.setChannel(10);
-        tv1.upVolume();
-        tv1.downVolume();
-        tv1.mute();
-        tv1.powerOff();
-        public void print2(){
-            System.out.println("TV modelName:" + tv1.modelName);
-        }
-
-        public void print3();
-
-        remote2.checkIfDeviceConnected();
-        if (remote2.tvDevice.isOn = false) {
-            remote2.connectDevice(TVDevice);
-        }
-        remote2.upVolume();
-        remote2.downVolume();
-        remote2.switchTheCannel(4444);
-        remote2.currentChannel();
-        remote2.disconnectDevice();
-
-
-        public void print4();
-
-        remote1.upVolume();
-        remote1.downVolume();
-        remote1.switchTheCannel(22);
-        remote1.currentChannel();
-        remote1.disconnectDevice();
-            }
     public void print1() {
         System.out.println("Calling methods TV tv1=new TV");
     }
-    public void print2(){
+
+    public void print2() {
         System.out.println("TV modelName:" + tv1.modelName);
     }
-    public void print3(){
+
+    public void print3() {
         System.out.println("Calling methods TV tv1=new TV via Remote Controller  RemoteController remote2=new RemoteController(tv1) ");
     }
+
     public void print4() {
         System.out.println("Calling methods RemoteController remote1=new RemoteController()");
     }

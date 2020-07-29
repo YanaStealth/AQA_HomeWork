@@ -1,81 +1,82 @@
 package main_homework.Lesson7_4_RemoteDevice;
 
-import java.lang.reflect.Field;
-
 public class RemoteController implements Device, Volume {
     TVDevice tvDevice;
+    //TV tv;
+    TV currentTV=new TV();
 
-
-   public RemoteController(TVDevice newTvDevice) {
-        this.tvDevice = newTvDevice;}
-
+   public RemoteController(TVDevice tvDevice) {
+        this.tvDevice = tvDevice;}
 
     public RemoteController() {
     }
 
-    public void connectDevice(TVDevice newTvDevice) {
-        this.tvDevice = newTvDevice;
+    public void connectDevice(TVDevice tvDevice) {
+        this.tvDevice = tvDevice;
         System.out.println("Remote Controller: The device is connected. "); //полю tvDevice в твоєму ремоут контроллері добавляти обєкт твого tvDevice,этот метод должен выполнять функцию конструктора с одним параметром.законектити це тоді коли ти потім можеш оперувати законекчиним ТВ.і методи будуть працювати тільки з тим ТВ який законекчений
     }
 
     public void disconnectDevice() {
-        tvDevice.isOn = false;
-        System.out.println("Remote Controller: The device is disconnected. " + tvDevice.isOn);
+        currentTV.isOn = false;
+        System.out.println("Remote Controller: The device is disconnected. " + currentTV.isOn);
     }
 
        public void switchTheCannel(int channelNumber) {  //use private variable of TV class
-           channelNumber =  tvDevice.setChannel();
+          // channelNumber =  tv.getChannelNumber();
            channelNumber++;
+           System.out.println("New Сhannel ->"+channelNumber);
+
        }
 
     private boolean checkIfDeviceConnected() {
-        if ( tvDevice.isOn = true){
-            System.out.println("Remote Controller: Checking if the device is connected = " + tvDevice.isOn);
+        if ( currentTV.isOn = true){
+            System.out.println("Remote Controller: Checking if the device is connected = " + currentTV.isOn);
         } else{
-            System.out.println("Remote Controller: Checking if the device is connected = " + tvDevice.isOn);
+            System.out.println("Remote Controller: Checking if the device is connected = " + currentTV.isOn);
         }
+        return currentTV.isOn;
     }
 
     @Override
     public void upVolume() {
-        tvDevice.upVolume();
+        currentTV.upVolume();
 
         System.out.println("Up Volume is called from Remote Controller");
     }
 
     @Override
     public void downVolume() {
-        tvDevice.downVolume();
+        currentTV.downVolume();
         System.out.println("Volume is called from Remote Controller");
     }
 
     @Override
     public void mute() {
-        tvDevice.mute();
+        currentTV.mute();
         System.out.println("Mute is called from Remote Controller");
     }
 
     @Override
     public void powerOn() {
-        tvDevice.powerOn();
+        currentTV.powerOn();
         System.out.println("Power On is called from Remote Controller");
     }
 
     @Override
     public void powerOff() {
-        tvDevice.powerOff();
+        currentTV.powerOff();
         System.out.println("Power On is called from Remote Controller");
     }
 
     @Override
     public void setChannel(int channel) {
-        tvDevice.setChannel(channel);
+        currentTV.setChannel(channel);
         System.out.println("Channel is set from Remote Controller" + channel);
     }
 
     @Override
     public void currentChannel() {
-        tvDevice.currentChannel();
+        currentTV.currentChannel();
         System.out.println("currentChannel is called from Remote Controller");
     }
 }
