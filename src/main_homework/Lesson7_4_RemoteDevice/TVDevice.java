@@ -1,14 +1,25 @@
 package main_homework.Lesson7_4_RemoteDevice;
 
 abstract public class TVDevice implements Volume, Device {
-    String modelName;
-    boolean isOn = true;
-    Volume vol;
+    protected String modelName;
+    protected boolean isOn = true;
+
+    public TVDevice() {
+    }
+
+    public TVDevice(String modelName, boolean isOn) {
+        this.modelName = modelName;
+        this.isOn = isOn;
+    }
+
+
+
+   /* Volume vol;
     Device dev;
 
-    public TVDevice(Volume vol, Device dev) {
-        this.vol = vol;
-        this.dev = dev;
+   public TVDevice(Volume vol, Device dev) {
+       this.vol = vol;
+      this.dev = dev;
     }
 
     public void upVolume() {
@@ -45,7 +56,7 @@ abstract public class TVDevice implements Volume, Device {
     private boolean checkIfDeviceConnected(){
         System.out.println("isDeviceConnected ->");
         return isOn;
-    }
+    }*/
 
 
 }

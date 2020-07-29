@@ -1,8 +1,11 @@
 package main_homework.Lesson7_4_RemoteDevice;
 
 public interface Device {
-   void powerOn();
-    void powerOff();
-    void setChannel(int channel);
-    void currentChannel();
+    public void powerOn();
+
+    public void powerOff();
+
+    public void setChannel(int channel);
+
+    public void currentChannel();
 }

@@ -1,46 +1,91 @@
 package main_homework.Lesson7_4_RemoteDevice;
 
-public class RemoteController implements Device,Volume {
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+import java.lang.reflect.Field;
+
+public class RemoteController implements Device, Volume {
+    TVDevice tvDevice;
+
+
+    public RemoteController(TVDevice tvDevice) {
+        this.tvDevice = tvDevice;
     }
 
-    public void connectDevice(TVDevice tvDevice){}              //connectDevice у меня в пульте чтобы подключить телевизор
-     void disconnectDevice(){}
+    public RemoteController() {
+    }
+
+    public void connectDevice(TVDevice tvDevice) {
+        tvDevice.isOn = true;
+        System.out.println("Remote Controller: The device is connected. " + tvDevice.isOn);
+    }
+
+    public void disconnectDevice() {
+        tvDevice.isOn = false;
+        System.out.println("Remote Controller: The device is disconnected. " + tvDevice.isOn);
+    }
+//?????
+    public void switchTheCannel(int channelNumber) {
+        tvDevice.setChannel() = tvDevice.setChannel() + 1;
+        System.out.println("TV: Setting a specific channel:" + channelNumber);
+    }
+
+    private boolean checkIfDeviceConnected() {
+        if ( tvDevice.isOn = true){
+            System.out.println("Remote Controller: Checking if the device is connected = " + tvDevice.isOn);
+        } else{
+            System.out.println("Remote Controller: Checking if the device is connected = " + tvDevice.isOn);
+        }
+    }
 
     @Override
     public void upVolume() {
-        System.out.println("upVolume");
+        tvDevice.upVolume();
+
+        System.out.println("Up Volume is called from Remote Controller");
     }
 
     @Override
     public void downVolume() {
-        System.out.println("downVolume");
+        tvDevice.downVolume();
+        System.out.println("Volume is called from Remote Controller");
     }
 
     @Override
     public void mute() {
-        System.out.println("mute");
+        tvDevice.mute();
+        System.out.println("Mute is called from Remote Controller");
     }
 
     @Override
     public void powerOn() {
-        System.out.println("powerOn");
+        tvDevice.powerOn();
+        System.out.println("Power On is called from Remote Controller");
     }
 
     @Override
     public void powerOff() {
-        System.out.println("powerOff");
+        tvDevice.powerOff();
+        System.out.println("Power On is called from Remote Controller");
     }
 
     @Override
     public void setChannel(int channel) {
-        System.out.println("channel ->"+channel);
+        tvDevice.setChannel(channel);
+        System.out.println("Channel is set from Remote Controller" + channel);
     }
 
     @Override
     public void currentChannel() {
-        System.out.println("currentChannel");
+        tvDevice.currentChannel();
+        System.out.println("currentChannel is called from Remote Controller");
     }
 }
+
+
+  /*  @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+    public void connectDevice(TVDevice tvDevice) {
+    }              //connectDevice у меня в пульте чтобы подключить телевизор
+    void disconnectDevice() {
+    }*/
