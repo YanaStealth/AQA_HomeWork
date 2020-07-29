@@ -24,7 +24,7 @@ public class Main {
 
         mainTv1.remote2.upVolume();
         mainTv1.remote2.downVolume();
-        mainTv1.tv1.setChannel(100);
+        mainTv1.remote2.setChannel(100);
         mainTv1.remote2.switchTheCannel(mainTv1.tv1.getChannelNumber());
         mainTv1.remote2.currentChannel();
         mainTv1.remote2.disconnectDevice();
