@@ -6,27 +6,27 @@ public class RemoteController implements Device, Volume {
     TVDevice tvDevice;
 
 
-    public RemoteController(TVDevice tvDevice) {
-        this.tvDevice = tvDevice;
-    }
+   public RemoteController(TVDevice newTvDevice) {
+        this.tvDevice = newTvDevice;}
+
 
     public RemoteController() {
     }
 
-    public void connectDevice(TVDevice tvDevice) {
-        tvDevice.isOn = true;
-        System.out.println("Remote Controller: The device is connected. " + tvDevice.isOn);
+    public void connectDevice(TVDevice newTvDevice) {
+        this.tvDevice = newTvDevice;
+        System.out.println("Remote Controller: The device is connected. "); //полю tvDevice в твоєму ремоут контроллері добавляти обєкт твого tvDevice,этот метод должен выполнять функцию конструктора с одним параметром.законектити це тоді коли ти потім можеш оперувати законекчиним ТВ.і методи будуть працювати тільки з тим ТВ який законекчений
     }
 
     public void disconnectDevice() {
         tvDevice.isOn = false;
         System.out.println("Remote Controller: The device is disconnected. " + tvDevice.isOn);
     }
-//?????
-    public void switchTheCannel(int channelNumber) {
-        tvDevice.setChannel() = tvDevice.setChannel() + 1;
-        System.out.println("TV: Setting a specific channel:" + channelNumber);
-    }
+
+       public void switchTheCannel(int channelNumber) {  //use private variable of TV class
+           channelNumber =  tvDevice.setChannel();
+           channelNumber++;
+       }
 
     private boolean checkIfDeviceConnected() {
         if ( tvDevice.isOn = true){
