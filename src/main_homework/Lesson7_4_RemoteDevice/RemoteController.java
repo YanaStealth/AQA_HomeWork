@@ -2,8 +2,6 @@ package main_homework.Lesson7_4_RemoteDevice;
 
 public class RemoteController implements Device, Volume {
     TVDevice tvDevice;
-    //TV tv;
-    // TV currentTV=new TV();
 
     public RemoteController(TVDevice tvDevice) {
         this.tvDevice = tvDevice;
