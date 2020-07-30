@@ -14,7 +14,7 @@ public class RemoteController implements Device, Volume {
 
     public void connectDevice(TVDevice tvDevice) {  //метод коннектит
         this.tvDevice = tvDevice;
-        System.out.println("Remote Controller: The device is connected. "); //полю tvDevice в твоєму ремоут контроллері добавляти обєкт твого tvDevice,этот метод должен выполнять функцию конструктора с одним параметром.Ты используешь не методы абстрактного класса, а методы обьекта который лежит по ссылке. используешь методы из объекта, а не абстракции. Что засунешь в то поле, то и будет твоим объектом у которого ты будешь вызывать методы
+        System.out.println("Remote Controller: The device is connected. ");} //полю tvDevice в твоєму ремоут контроллері добавляти обєкт твого tvDevice,этот метод должен выполнять функцию конструктора с одним параметром.Ты используешь не методы абстрактного класса, а методы обьекта который лежит по ссылке. используешь методы из объекта, а не абстракции. Что засунешь в то поле, то и будет твоим объектом у которого ты будешь вызывать методы
 
         public void disconnectDevice () {
             tvDevice.isOn = false;
