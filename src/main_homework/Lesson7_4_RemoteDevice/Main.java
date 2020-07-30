@@ -2,8 +2,9 @@ package main_homework.Lesson7_4_RemoteDevice;
 
 public class Main {
     TV tv1 = new TV("SONY", true, 1, 5);
-    RemoteController remote1 = new RemoteController();
-    RemoteController remote2 = new RemoteController(tv1);
+    TV tv2 = new TV("PANASONIC", true, 20, 100);
+    RemoteController remote1 = new RemoteController(tv1); //инициализация поля TVDevice
+    RemoteController remote2 = new RemoteController(tv2);
 
     public static void main(String[] args) {
         Main mainTv1 = new Main();
@@ -19,9 +20,7 @@ public class Main {
         mainTv1.tv1.powerOff();
 
         mainTv1.print2();
-
         mainTv1.print3();
-
         mainTv1.remote2.upVolume();
         mainTv1.remote2.downVolume();
         mainTv1.remote2.setChannel(100);
@@ -29,9 +28,7 @@ public class Main {
         mainTv1.remote2.currentChannel();
         mainTv1.remote2.disconnectDevice();
 
-
         mainTv1.print4();
-
         mainTv1.remote1.upVolume();
         mainTv1.remote1.downVolume();
         mainTv1.remote1.switchTheCannel(22);
