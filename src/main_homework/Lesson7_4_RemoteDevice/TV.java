@@ -51,9 +51,9 @@ public class TV extends TVDevice {
 
     @Override
     public void upVolume() {
-        volumeLevel = volumeLevel + 1;
+        volumeLevel++;
         System.out.println("TV: Setting volume: up. The Level is: " + volumeLevel);
-    }
+            }
 
     @Override
     public void downVolume() {
