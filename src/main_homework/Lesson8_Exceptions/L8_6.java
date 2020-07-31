@@ -8,6 +8,7 @@ Numbers output from a new line preserving the order of input.*/
 package main_homework.Lesson8_Exceptions;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class L8_6 {
@@ -17,18 +18,19 @@ public class L8_6 {
         Scanner sc = new Scanner(System.in); //System.in An InputStream which is typically connected to keyboard input of console programs.
         for (int i = 0; i < 5; i++) {
             simpleArray[i] = sc.nextDouble(); //scan data for input of integer value
-         if(sc.hasNextDouble() == false){ // возвращает истину если с потока ввода можно считать double
-            try {
-                throw new NumberFormatException("NFC");
+            if(!(sc.hasNextDouble()==true)) { // возвращает истину если с потока ввода можно считать double
+                try {
+                    throw new InputMismatchException("NFC");
+                } catch (InputMismatchException e) {
+                    System.out.println("Number format exception: you can enter integers only");
+                }
             }
-            catch (NumberFormatException e) {
-                System.out.println("Number format exception: you can enter integers only");
-            }
-                 }}
-        double totalSum=Arrays.stream(simpleArray).sum();
-        System.out.println("Total sum of the array elements is: "+totalSum);
+        }
+        double totalSum = Arrays.stream(simpleArray).sum();
+        System.out.println("Total sum of the array elements is: " + totalSum);
 
-            }}
+    }
+}
 
 
 // if (!Character.isDigit(simpleArray[i])) {
