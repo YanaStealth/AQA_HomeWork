@@ -19,9 +19,9 @@ public class L8_4 {
         try {
             int a = 0;
             int b = 4 / a;
-        } catch (ArithmeticException e)  {
+        } catch (ArithmeticException e) {
             e.printStackTrace();
-        }  catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
