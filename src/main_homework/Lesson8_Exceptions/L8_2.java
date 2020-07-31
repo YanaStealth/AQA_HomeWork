@@ -16,12 +16,9 @@ public class L8_2 {
             return a / b;
         } catch (ArithmeticException e) {
             System.out.println("You are trying to divide by zero " + a + "/" + b);
-
         }
-        return a / b;
+        return 0;
     }
-
-
 }
 
 

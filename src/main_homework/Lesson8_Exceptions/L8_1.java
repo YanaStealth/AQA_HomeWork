@@ -20,7 +20,6 @@ public class L8_1 {
             try {
                 throw new RuntimeException("RE");
             } catch (RuntimeException e) {
-                System.out.println("Exception: Number = 0");
             }
         }
     }
