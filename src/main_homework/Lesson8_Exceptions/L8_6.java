@@ -18,8 +18,12 @@ public class L8_6 {
         for (int i = 0; i < 5; i++) {
             simpleArray[i] = sc.nextDouble(); //scan data for input of integer value
          if(sc.hasNextDouble() == false){ // возвращает истину если с потока ввода можно считать double
-            try {throw new NumberFormatException("NFC");}
-            catch(NumberFormatException e){System.out.println("Number format exception: you can enter integers only");}
+            try {
+                throw new NumberFormatException("NFC");
+            }
+            catch (NumberFormatException e) {
+                System.out.println("Number format exception: you can enter integers only");
+            }
                  }}
         double totalSum=Arrays.stream(simpleArray).sum();
         System.out.println("Total sum of the array elements is: "+totalSum);
