@@ -7,27 +7,29 @@ Numbers output from a new line preserving the order of input.*/
 
 package main_homework.Lesson8_Exceptions;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class L8_6 {
     public static void main(String args[]) throws IncorrectFive {
-        double[] simpleArray = new double[5];
-        System.out.println("Enter 5 digits to calculate the Sum of them");
+        //double[] simpleArray = new double[5];
+        System.out.println("Enter digits:");
         Scanner sc = new Scanner(System.in); //System.in An InputStream which is typically connected to keyboard input of console programs.
         int i = 0;
+        ArrayList<Double> arrayList = new ArrayList<>();
         try {
-            for (i = 0; i < 5; i++) {
-                simpleArray[i] = sc.nextDouble(); //scan data for input of integer value
+            do {
+                arrayList.add(i, sc.nextDouble()); //scan data for input of integer value
+                i++;
             }
+            while (sc.hasNextDouble() == true);
+            throw new InputMismatchException("! ");
         } catch (InputMismatchException e) {
             System.out.println("Number format exception: you can enter integers only" + e.getStackTrace());
-        } catch (Exception e) {
-            System.out.println("General Exception" + e.getStackTrace());
         }
-
-        double totalSum = Arrays.stream(simpleArray).sum();
-        System.out.println("Total sum of the array elements is: " + totalSum);
+        for (Double s : arrayList) {
+            System.out.println(s);
+        }
     }
 }

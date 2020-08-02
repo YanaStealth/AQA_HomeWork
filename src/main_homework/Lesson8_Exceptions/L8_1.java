@@ -17,10 +17,10 @@ public class L8_1 {
         } else if (a > 0) {
             System.out.println("Number > 0");
         } else {
-            try {
-                throw new RuntimeException("RE");
-            } catch (RuntimeException e) {
-            }
+            //try {
+                throw new RuntimeException("Exception: number = 0");
+            }// catch (RuntimeException e) {
+           // }
         }
     }
-}
+
