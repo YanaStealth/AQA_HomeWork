@@ -16,14 +16,14 @@ public class L8_6 {
         //double[] simpleArray = new double[5];
         System.out.println("Enter digits:");
         Scanner sc = new Scanner(System.in); //System.in An InputStream which is typically connected to keyboard input of console programs.
-        int i = 0;
+        //int i = 0;
         ArrayList<Double> arrayList = new ArrayList<>();
         try {
-            do {
-                arrayList.add(i, sc.nextDouble()); //scan data for input of integer value
-                i++;
+            do {  //
+                arrayList.add(sc.nextDouble()); //scan data for input of integer value
+              //  i++; Индекс i можно не использовать. По умолчанию метод add добавляет элементы в конец списка
             }
-            while (sc.hasNextDouble() == true);
+            while (sc.hasNextDouble()); // пока ввод double типа true
             throw new InputMismatchException("! ");
         } catch (InputMismatchException e) {
             System.out.println("Number format exception: you can enter integers only" + e.getStackTrace());
