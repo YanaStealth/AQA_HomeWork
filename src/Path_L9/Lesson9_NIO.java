@@ -1,3 +1,5 @@
+
+
 package Path_L9;
 
 import java.io.IOException;
@@ -9,11 +11,11 @@ import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class Lesson9_NIO {
 
 
    public static void main(String[] args) {
-      Lesson9_NIO nio= new Lesson9_NIO();
       Charset utf8 = StandardCharsets.UTF_8;
       List<String> lines = Arrays.asList("1st line", "2nd line");
       byte[] data = {1, 2, 3, 4, 5};
