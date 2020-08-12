@@ -14,14 +14,15 @@ public class Read1 {
 
         Set<String> uniqueWords = new HashSet<>();
         Collections.addAll(uniqueWords, content.split("\\W+"));
-        System.out.println(uniqueWords);
+            for ( String s : uniqueWords )
+                System.out.println(s);
+        //System.out.println(uniqueWords);
         System.out.println(uniqueWords.size());
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 
     private static String readUsingBufferedReader(String fileName) throws IOException {
         BufferedReader reader = new BufferedReader( new FileReader(fileName));
